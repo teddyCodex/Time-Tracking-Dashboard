@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+:root {
+  --color-blue: hsl(246, 80%, 60%);
+  --color-light-red: hsl(15, 100%, 70%); /* work */
+  --color-soft-blue: hsl(195, 74%, 62%); /* play */
+  --color-light-red2: hsl(348, 100%, 68%); /* study */
+  --color-lime-green: hsl(145, 58%, 55%); /* exercise */
+  --color-violet: hsl(264, 64%, 52%); /* social */
+  --color-soft-orange: hsl(43, 84%, 65%); /* self care */
+  /* Neutral Colors */
+  --color-very-dark-blue: hsl(226, 43%, 10%);
+  --color-dark-blue: hsl(235, 46%, 20%);
+  --color-desaturated-blue: hsl(235, 45%, 61%);
+  --color-pale-blue: hsl(236, 100%, 87%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-very-dark-blue);
+}
+
+.container {
+  display: flex;
+  gap: 3rem;
+}
+
+/*  CARD ONE (USER INFORMATION) STYLING */
+.user-data {
+  display: inline-block;
+}
+
+.user-data .user-profile {
+  position: relative;
+  background-color: var(--color-blue);
+  width: 20rem;
+  height: 30rem;
+  padding: 3.5rem 2rem;
+  border-radius: 1rem 1rem;
+  z-index: 5;
+}
+
+.user-data .user-profile img {
+  width: 8rem;
+  border-radius: 50%;
+  border: 0.2rem solid white;
+  margin-bottom: 4rem;
+}
+
+.user-data .user-profile p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.user-data .user-profile h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.user-data .period-select {
+  position: relative;
+  bottom: 1.2rem;
+  background-color: var(--color-dark-blue);
+  height: 14rem;
+  padding: 2rem;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.user-data .period-select ul li {
+  padding: 1rem;
+  font-size: 1.3rem;
+  color: var(--color-desaturated-blue);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.user-data .period-select ul li:hover {
+  color: rgb(255, 250, 240);
+}
+
+/*  STYLING OF THE SMALLER CARDS (GRID)*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem 3rem;
+}
+.top-buffer {
+  position: relative;
+  height: 5rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.top-buffer svg {
+  position: absolute;
+  right: 0.7rem;
+  fill: #727272;
+  opacity: 0.5;
+}
+
+.card {
+  position: relative;
+  width: 22rem;
+  height: 17rem;
+  background-color: var(--color-dark-blue);
+  color: rgb(255, 250, 240);
+  border-radius: 1rem 1rem;
+  padding: 3rem 2rem;
+  z-index: 5;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.card-title h2 {
+  font-size: 1.5rem;
+}
+
+.grid span {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.time-data .current {
+  font-size: 4.2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.time-data .previous {
+  font-size: 1.1rem;
+  color: var(--color-desaturated-blue);
+}
+
+/* Work Card */
+.work-card .top-buffer {
+  background-color: var(--color-light-red);
+}
+
+.work-card .card {
+  bottom: 1.5rem;
+}
+
+/* Play Card */
+.play-card .top-buffer {
+  background-color: var(--color-soft-blue);
+}
+
+.play-card .card {
+  bottom: 1.5rem;
+}
+
+/* Study Card */
+.study-card .top-buffer {
+  background-color: var(--color-light-red2);
+}
+
+.study-card svg {
+  opacity: 0.8;
+}
+
+.study-card .card {
+  bottom: 1.5rem;
+}
+
+/* exercise Card */
+.exercise-card .top-buffer {
+  background-color: var(--color-lime-green);
+}
+
+.exercise-card .card {
+  bottom: 1.5rem;
+}
+
+/* social Card */
+.social-card .top-buffer {
+  background-color: var(--color-violet);
+}
+
+.social-card svg {
+  opacity: 0.8;
+}
+
+.social-card .card {
+  bottom: 1.5rem;
+}
+
+/* self-care Card */
+.self-care-card .top-buffer {
+  background-color: var(--color-soft-orange);
+}
+
+.self-care-card .card {
+  bottom: 1.5rem;
+}
+
+.active {
+  color: rgb(255, 250, 240) !important;
+}
