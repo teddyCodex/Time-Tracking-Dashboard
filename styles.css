@@ -52,14 +52,14 @@ body {
 .user-data .user-profile {
   position: relative;
   background-color: var(--color-blue);
-  width: 20rem;
+  width: 22rem;
   height: 30rem;
   padding: 3.5rem 2rem;
   border-radius: 1rem 1rem;
   z-index: 5;
 }
 
-.user-data .user-profile img {
+.image {
   width: 8rem;
   border-radius: 50%;
   border: 0.2rem solid white;
@@ -220,4 +220,69 @@ body {
 
 .active {
   color: rgb(255, 250, 240) !important;
+}
+
+/* MEDIA QUERIES FOR SMALLER DEVICES
+TABLETS AND BELOW
+*/
+
+@media screen and (max-width: 900px) {
+  body {
+    height: auto;
+    padding: 5rem 0;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .grid {
+    display: block;
+  }
+  .user-data .user-profile {
+    max-width: 42rem;
+    width: 100%;
+    height: 15rem;
+  }
+
+  .user-profile img {
+    float: left;
+    border: 3px solid #fff;
+  }
+
+  .user-profile div {
+    float: right;
+    padding-top: 2rem;
+    padding-left: 1.2rem;
+  }
+  .user-data .user-profile p {
+    font-size: 1.2rem;
+  }
+  .user-data .user-profile h1 {
+    font-size: 2.5rem;
+  }
+  .card {
+    max-width: 42rem;
+    height: 15rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .user-data .period-select {
+    height: 9rem;
+  }
+  .period-select ul {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+  }
+  .user-data .period-select ul li {
+    font-size: 1.6rem;
+  }
+
+  .time-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .time-data .previous {
+    font-size: 1.5rem;
+  }
 }
